@@ -17,10 +17,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Changed from height: 100vh to min-height */
             margin: 0;
             position: relative;
-            overflow: hidden;
+            overflow-y: auto; /* Enables scrolling */
         }
         
         /* Decorative background elements */
@@ -96,7 +96,6 @@
             margin: 8px 0;
             font-family: 'Poppins', sans-serif;
         }
-
         .timer, .stock {
             font-size: 22px;
             font-weight: bold;
@@ -108,13 +107,50 @@
             display: inline-block;
             border: 1px solid #ddd;
         }
-        
-        iframe {
-            width: 100%;
-            max-width: 450px;
-            height: 300px;
-            border: none;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 15px;
+        }
+        input {
+            width: 90%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .checkbox-container input {
+            width: auto;
+            margin-right: 10px;
+        }
+        button {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s;
+            margin-top: 10px;
+        }
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #2980b9, #1f618d);
+        }
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #e74c3c;
         }
     </style>
 </head>
@@ -131,9 +167,15 @@
             <li>✅ Proven weight loss strategies backed by science</li>
             <li>✅ Expert tips for sustaining long-term fat loss</li>
         </ul>
-        
-        <!-- Brevo Embedded Form -->
-        <iframe src="https://49df9fbb.sibforms.com/serve/MUIFAMUGsa59EPV8qdzuHhQRD_9GGJ0SYHeIRRlYd1asAyIp-KlkUE7R1iIb5QTY5N8vKwrsmyecahpqQc6wghIafUkjW9IuIT_iiLwkNTj7tzM0hB63x8weiSAScpLtZGNwjUhelvBcXQWsN1pDBpooSK8wg_0CTqYsIqzyfxO4UmF582rUF7JEDQADxJP7hrF-pp0i9yaGni6O"></iframe>
+        <form id="emailForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="checkbox-container">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">I agree to receive promotions and updates via email.</label>
+            </div>
+            <button type="submit">🚀 Get My Free eBook</button>
+        </form>
+        <p id="message"></p>
     </div>
 </body>
 </html>
