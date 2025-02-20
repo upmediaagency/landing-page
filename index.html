@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #ffffff, #f5f5f5);
@@ -17,13 +17,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             position: relative;
-            overflow: hidden;
+            overflow: auto;
         }
-        
-        /* Decorative background elements */
+
         .background-deco {
             position: absolute;
             top: -50px;
@@ -57,12 +56,14 @@
             border: 2px solid #ddd;
             z-index: 1;
         }
+
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 34px;
             font-weight: 700;
             color: #222;
         }
+
         .ebook-image {
             max-width: 100%;
             height: auto;
@@ -70,12 +71,14 @@
             margin-bottom: 20px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
+
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 15px;
         }
+
         input {
             width: 90%;
             padding: 14px;
@@ -85,15 +88,18 @@
             text-align: center;
             font-size: 16px;
         }
+
         .checkbox-container {
             display: flex;
             align-items: center;
             margin-top: 10px;
         }
+
         .checkbox-container input {
             width: auto;
             margin-right: 10px;
         }
+
         button {
             background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
@@ -106,10 +112,12 @@
             transition: transform 0.3s ease, background 0.3s;
             margin-top: 10px;
         }
+
         button:hover {
             transform: scale(1.05);
             background: linear-gradient(135deg, #2980b9, #1f618d);
         }
+
         #message {
             margin-top: 15px;
             font-weight: bold;
@@ -123,14 +131,17 @@
     <div class="container">
         <h1>🎁 Get Your Free Ultimate Weight Loss eBook! 🎁</h1>
         <img src="ULTIMATE WEIGHT LOSS EBOOK.png" alt="Ultimate Weight Loss eBook" class="ebook-image">
-        <form id="emailForm">
-            <input type="email" id="email" placeholder="Enter your email" required>
+
+        <!-- BREVO FORM -->
+        <form action="https://49df9fbb.sibforms.com/serve/MUIFABJqI2k8ifTbEJ9G3VSIUE_isWtXYs3fo9jT1E--HXwfqqq9o6UnkLZm2wywdTfwToqr8N9OETtQ6nYllWElFSsPziWSyIW9V1Nvz3CGMvEpsm_m7IietByNFJ-s7kc6S7cDc1ZUAFvXzcGWjyTsnn3U6QnT4OAUTUBnhk3Q4xJdKgXriPsR2c8-FMAYzfiOGHznLgGyMUrZ" method="POST">
+            <input type="email" name="email" placeholder="Enter your email" required>
             <div class="checkbox-container">
                 <input type="checkbox" id="agree" required>
                 <label for="agree">I agree to receive promotions and updates via email.</label>
             </div>
             <button type="submit">🚀 Get My Free eBook</button>
         </form>
+        
         <p id="message"></p>
     </div>
 </body>
