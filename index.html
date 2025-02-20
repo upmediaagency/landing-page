@@ -3,65 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 Get Your Free eBook Now! 🔥</title>
+    <title>🔥 Get Your Free Ultimate Weight Loss eBook! 🔥</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
         
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
+            background: linear-gradient(135deg, #ffffff, #f5f5f5);
+            color: #333;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            position: relative;
             overflow: hidden;
         }
+        
+        /* Decorative background elements */
+        .background-deco {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(52, 152, 219, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .background-deco-2 {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
+            background: rgba(231, 76, 60, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
         .container {
-            background: rgba(255, 255, 255, 0.15);
+            background: #ffffff;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             max-width: 500px;
             width: 90%;
-            backdrop-filter: blur(12px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
             text-align: center;
             position: relative;
+            border: 2px solid #ddd;
+            z-index: 1;
         }
         h1 {
-            font-size: 30px;
-            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            font-weight: 700;
+            color: #222;
         }
         p {
             font-size: 18px;
             font-weight: 300;
+            color: #555;
         }
         .ebook-image {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
             margin-bottom: 20px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .icons i {
+            font-size: 30px;
+            color: #e67e22;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        ul li {
+            margin: 8px 0;
+            font-family: 'Poppins', sans-serif;
         }
         .timer, .stock {
             font-size: 22px;
             font-weight: bold;
             margin-top: 15px;
-            color: #ffcc00;
-            background: rgba(0, 0, 0, 0.3);
+            color: #e74c3c;
+            background: #f8f9fa;
             padding: 12px;
             border-radius: 10px;
             display: inline-block;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            border: 1px solid #ddd;
         }
         form {
             display: flex;
@@ -73,13 +117,22 @@
             width: 90%;
             padding: 14px;
             margin: 10px 0;
-            border: none;
+            border: 1px solid #ccc;
             border-radius: 8px;
             text-align: center;
             font-size: 16px;
         }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .checkbox-container input {
+            width: auto;
+            margin-right: 10px;
+        }
         button {
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            background: linear-gradient(135deg, #3498db, #2980b9);
             color: white;
             border: none;
             padding: 14px 28px;
@@ -88,49 +141,42 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.3s ease, background 0.3s;
+            margin-top: 10px;
         }
         button:hover {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, #ff2a68, #ff5733);
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #2980b9, #1f618d);
         }
         #message {
             margin-top: 15px;
             font-weight: bold;
-            color: #ffcc00;
+            color: #e74c3c;
         }
     </style>
 </head>
 <body>
+    <div class="background-deco"></div>
+    <div class="background-deco-2"></div>
     <div class="container">
-        <h1>🎁 Exclusive Free eBook Just for You! 🎁</h1>
-        <img src="ULTIMATE WEIGHT LOSS EBOOK.png" alt="eBook Cover" class="ebook-image">
-        <p>Sign up now to claim your powerful weight loss guide!</p>
-        <p class="timer">⏳ Hurry! Offer expires in <span id="countdown">05:00</span> minutes! ⏳</p>
-        <p class="stock">📦 Only <span id="stock-count">17</span> copies left! 📦</p>
+        <h1>🎁 Get Your Free Ultimate Weight Loss eBook! 🎁</h1>
+        <img src="ULTIMATE WEIGHT LOSS EBOOK.png" alt="Ultimate Weight Loss eBook" class="ebook-image">
+        <p>Unlock the secrets to burning fat and achieving your dream body! This eBook includes:</p>
+        <ul>
+            <li>✅ A step-by-step fat-burning meal plan</li>
+            <li>✅ The best foods to accelerate weight loss</li>
+            <li>✅ Proven weight loss strategies backed by science</li>
+            <li>✅ Expert tips for sustaining long-term fat loss</li>
+        </ul>
         <form id="emailForm">
             <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="checkbox-container">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">I agree to receive promotions and updates via email.</label>
+            </div>
             <button type="submit">🚀 Get My Free eBook</button>
         </form>
         <p id="message"></p>
     </div>
-    <script>
-        function startCountdown(duration) {
-            let timer = duration, minutes, seconds;
-            setInterval(function () {
-                minutes = Math.floor(timer / 60);
-                seconds = timer % 60;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-                document.getElementById('countdown').textContent = minutes + ":" + seconds;
-                if (--timer < 0) {
-                    timer = duration; // Reset timer after expiration
-                }
-            }, 1000);
-        }
-        
-        window.onload = function () {
-            startCountdown(300); // 5-minute countdown
-        };
-    </script>
 </body>
 </html>
+
