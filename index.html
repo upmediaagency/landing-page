@@ -20,28 +20,42 @@
             height: 100vh;
             margin: 0;
             position: relative;
-            overflow-y: auto;
+            overflow: hidden;
         }
         
+        /* Decorative background elements */
+        .background-deco {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(52, 152, 219, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .background-deco-2 {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
+            background: rgba(231, 76, 60, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
         .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             background: #ffffff;
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
+            max-width: 500px;
             width: 90%;
+            text-align: center;
+            position: relative;
             border: 2px solid #ddd;
-        }
-        .text-content {
-            flex: 1;
-            text-align: left;
-            padding-right: 20px;
-        }
-        .form-content {
-            flex: 1;
+            z-index: 1;
         }
         h1 {
             font-family: 'Playfair Display', serif;
@@ -49,28 +63,12 @@
             font-weight: 700;
             color: #222;
         }
-        p {
-            font-size: 18px;
-            font-weight: 300;
-            color: #555;
-        }
         .ebook-image {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
             margin-bottom: 20px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            font-size: 18px;
-            font-weight: 400;
-        }
-        ul li {
-            margin: 8px 0;
-            font-family: 'Poppins', sans-serif;
         }
         form {
             display: flex;
@@ -86,6 +84,15 @@
             border-radius: 8px;
             text-align: center;
             font-size: 16px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .checkbox-container input {
+            width: auto;
+            margin-right: 10px;
         }
         button {
             background: linear-gradient(135deg, #3498db, #2980b9);
@@ -111,25 +118,20 @@
     </style>
 </head>
 <body>
+    <div class="background-deco"></div>
+    <div class="background-deco-2"></div>
     <div class="container">
-        <div class="text-content">
-            <h1>🎁 Get Your Free Ultimate Weight Loss eBook! 🎁</h1>
-            <img src="ULTIMATE WEIGHT LOSS EBOOK.png" alt="Ultimate Weight Loss eBook" class="ebook-image">
-            <p>Unlock the secrets to burning fat and achieving your dream body! This eBook includes:</p>
-            <ul>
-                <li>✅ A step-by-step fat-burning meal plan</li>
-                <li>✅ The best foods to accelerate weight loss</li>
-                <li>✅ Proven weight loss strategies backed by science</li>
-                <li>✅ Expert tips for sustaining long-term fat loss</li>
-            </ul>
-        </div>
-        <div class="form-content">
-            <form id="emailForm">
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <button type="submit">🚀 Get My Free eBook</button>
-            </form>
-            <p id="message"></p>
-        </div>
+        <h1>🎁 Get Your Free Ultimate Weight Loss eBook! 🎁</h1>
+        <img src="ULTIMATE WEIGHT LOSS EBOOK.png" alt="Ultimate Weight Loss eBook" class="ebook-image">
+        <form id="emailForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="checkbox-container">
+                <input type="checkbox" id="agree" required>
+                <label for="agree">I agree to receive promotions and updates via email.</label>
+            </div>
+            <button type="submit">🚀 Get My Free eBook</button>
+        </form>
+        <p id="message"></p>
     </div>
 </body>
 </html>
