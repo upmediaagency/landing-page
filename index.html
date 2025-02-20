@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Get Your Free eBook Now! 🔥</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 90%;
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+        .ebook-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .timer, .stock {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #ffcc00;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px;
+            border-radius: 10px;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
+        input {
+            width: 90%;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 16px;
+        }
+        button {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #ff2a68, #ff5733);
+        }
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎁 Exclusive Free eBook Just for You! 🎁</h1>
+        <img src="ebook-cover.jpg" alt="eBook Cover" class="ebook-image">
+        <p>Sign up now to claim your powerful weight loss guide!</p>
+        <p class="timer">⏳ Hurry! Offer expires in <span id="countdown">05:00</span> minutes! ⏳</p>
+        <p class="stock">📦 Only <span id="stock-count">17</span> copies left! 📦</p>
+        <form id="emailForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">🚀 Get My Free eBook</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script>
+        function startCountdown(duration) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = Math.floor(timer / 60);
+                seconds = timer % 60;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                document.getElementById('countdown').textContent = minutes + ":" + seconds;
+                if (--timer < 0) {
+                    timer = duration; // Reset timer after expiration
+                }
+            }, 1000);
+        }
+        
+        window.onload = function () {
+            startCountdown(300); // 5-minute countdown
+        };
+    </script>
+</body>
+</html>
