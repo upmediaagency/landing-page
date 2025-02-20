@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
-
+        
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #ffffff, #f5f5f5);
@@ -17,12 +17,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
             margin: 0;
             position: relative;
-            overflow: auto;
+            overflow: hidden;
         }
-
+        
+        /* Decorative background elements */
         .background-deco {
             position: absolute;
             top: -50px;
@@ -56,14 +57,17 @@
             border: 2px solid #ddd;
             z-index: 1;
         }
-
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: 34px;
             font-weight: 700;
             color: #222;
         }
-
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            color: #555;
+        }
         .ebook-image {
             max-width: 100%;
             height: auto;
@@ -71,57 +75,24 @@
             margin-bottom: 20px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 15px;
-        }
-
-        input {
-            width: 90%;
-            padding: 14px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .checkbox-container input {
-            width: auto;
-            margin-right: 10px;
-        }
-
-        button {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-size: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s ease, background 0.3s;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            transform: scale(1.05);
-            background: linear-gradient(135deg, #2980b9, #1f618d);
-        }
-
-        #message {
-            margin-top: 15px;
+        .timer, .stock {
+            font-size: 22px;
             font-weight: bold;
+            margin-top: 15px;
             color: #e74c3c;
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 10px;
+            display: inline-block;
+            border: 1px solid #ddd;
+        }
+        
+        iframe {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -131,18 +102,9 @@
     <div class="container">
         <h1>🎁 Get Your Free Ultimate Weight Loss eBook! 🎁</h1>
         <img src="ULTIMATE WEIGHT LOSS EBOOK.png" alt="Ultimate Weight Loss eBook" class="ebook-image">
-
-        <!-- BREVO FORM -->
-        <form action="https://49df9fbb.sibforms.com/serve/MUIFABJqI2k8ifTbEJ9G3VSIUE_isWtXYs3fo9jT1E--HXwfqqq9o6UnkLZm2wywdTfwToqr8N9OETtQ6nYllWElFSsPziWSyIW9V1Nvz3CGMvEpsm_m7IietByNFJ-s7kc6S7cDc1ZUAFvXzcGWjyTsnn3U6QnT4OAUTUBnhk3Q4xJdKgXriPsR2c8-FMAYzfiOGHznLgGyMUrZ" method="POST">
-            <input type="email" name="email" placeholder="Enter your email" required>
-            <div class="checkbox-container">
-                <input type="checkbox" id="agree" required>
-                <label for="agree">I agree to receive promotions and updates via email.</label>
-            </div>
-            <button type="submit">🚀 Get My Free eBook</button>
-        </form>
+        <p>Unlock the secrets to burning fat and achieving your dream body!</p>
         
-        <p id="message"></p>
+        <iframe width="540" height="305" src="https://49df9fbb.sibforms.com/serve/MUIFAJcaqj8dpKhb1TXSgUblcKnMCha9Eoak9HtkPzvudG1ULwvjvBneIr8Sh4APT3wuuGvANScukf5EgpGHOuaMszWXkgVRTU0amTKYs5Etgp9s9FlcnwYEEBc_nHXiPQ1nWrodkVQas_x8NsXclcCJTU_Y-xi6VBXduM4GUFpO4qfGOzD5DYmFLTGSwM7iylafukq_x9drDPuO" scrolling="auto" allowfullscreen></iframe>
     </div>
 </body>
 </html>
